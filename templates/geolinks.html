@@ -1,0 +1,17 @@
+{% extends base_template %}
+{% if not html %}
+    {% block content1 %}
+        <html>
+        <h3>
+            <center>
+                Link not found</br>
+                <center<form><input class="btn" type="button" value="Back" onclick="history.go(-1);return true;"></form>
+            </center>
+        </h3>
+        <html>
+    {% endblock %}
+{% else %}
+    {% block content %}
+        {{ html|safe }}
+    {% endblock %}
+{% endif %}

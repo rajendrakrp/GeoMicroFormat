@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content1 %}
+    <h4>Geo Microformat Parser</h4>
+    <p>Would expect "geo microformat of the form: " <b>&lt;span class="geo"&gt;52.686; -2.193&lt;/span&gt;</b></p>
+    <p>A link called <b>"Map"</b> will be appended after geo microformat tags</p>
+    <form action="{% url link %}" method="post" name="url_form" onSubmit="return is_empty(this)"> {% csrf_token %}
+        <input type="text" name="link" id="linkname" value="http://en.wikipedia.org/wiki/List_of_highest_mountains"/></br>
+        <input class="btn small" type="submit" id="link_button" value="Submit"/>
+    </form>
+{% endblock %}
+
+
+
+    
